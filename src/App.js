@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
 
-import Data from "./components/Data.js";
+import Data from "./components/Data/Data.js";
 
 function App() {
     const [data, setData] = useState([]);
