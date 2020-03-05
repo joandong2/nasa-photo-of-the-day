@@ -35,7 +35,7 @@ const DataItem = (props) => {
                 </Row>
                 <Row>
                     <Col xs="4">
-                        <h2>Film title: {props.title}</h2>
+                        <h2>{props.title}</h2>
                         <p>{props.explanation}</p>
                     </Col>
                     <Col xs="8">{element}</Col>
