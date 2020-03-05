@@ -28,13 +28,12 @@ const Data = () => {
 
     return (
         <div>
-            <form>
-                <input type="date" value={date} onChange={changeHandler} />
-            </form>
             {data.map((item, i) => {
                 return (
                     <DataItem
                         key={i}
+                        date={date}
+                        changeHandler={changeHandler}
                         title={item.title}
                         explanation={item.explanation}
                         media_type={item.media_type}

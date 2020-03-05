@@ -1,4 +1,7 @@
 import React from "react";
+import { Container, Row, Col } from "reactstrap";
+
+import "./Data.css";
 
 const DataItem = (props) => {
     let element = null;
@@ -10,8 +13,8 @@ const DataItem = (props) => {
             element = (
                 <iframe
                     title="apod_video"
-                    width="420"
-                    height="315"
+                    width="680"
+                    height="680"
                     src={props.url}
                 />
             );
@@ -21,11 +24,24 @@ const DataItem = (props) => {
     }
 
     return (
-        <div className="apod-card">
-            <h2>Film title: {props.title}</h2>
-            <p>{props.explanation}</p>
-            {element}
-        </div>
+        <Container>
+            <Row className="content-wrapper">
+                <Row>
+                    <input
+                        type="date"
+                        value={props.date}
+                        onChange={props.changeHandler}
+                    />
+                </Row>
+                <Row>
+                    <Col xs="4">
+                        <h2>Film title: {props.title}</h2>
+                        <p>{props.explanation}</p>
+                    </Col>
+                    <Col xs="8">{element}</Col>
+                </Row>
+            </Row>
+        </Container>
     );
 };
 export default DataItem;
